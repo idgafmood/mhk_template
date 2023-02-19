@@ -3,4 +3,4 @@ https://github.com/idgafmood/mhk_template/releases/download/%2B/mloop_ahk.zip
 https://github.com/idgafmood/mhk_template/releases/download/%2B/mloop_exe.zip
 {"password":"28ABE6402CEB44953E86F91102704E37817805F8365F","key":"NjAxOTg0NjcxNQ==`r`n"}
 //password = 'mloopTemplate'
-{"something":"something`r`n wow it didn't newline!!! special funny characters ::: but cant use double quote :c 'but this works!'","a":"2"}
+{"password":"562FCCBAC8744958D030777846D3224F1E69E0BF81A1326D0DD768495A289828B08F3E00198A6B30C591AEB9603DC955EFB06A7B3F8B1647E5D90E93BA395B94CE23805406ABFC374F36773D6282C365373272721D4D9693267C8FC69C2CE329597E7886C2145E60B00326BD6491AC0F53F873AE1EC9B862DF082F1D03008872A4F91B6146F761B26B48359A32B7BB3BB886","key":"OTQ2NzIxNjc3`r`n"}
