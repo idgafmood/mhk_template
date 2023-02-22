@@ -55,6 +55,7 @@
 
             function = function name you want to run on keypress, see above in template for reference
         /
+        
         _.wait()  |  example: _.wait()
             notes: waits for current hotkey to be lifted to continue, see above in template for reference
         /
@@ -157,4 +158,5 @@
     /
 
 */ ;\\ ᗜˬᗜ
+
 ```
