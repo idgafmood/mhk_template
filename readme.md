@@ -38,12 +38,22 @@
             notes: returns index of array where 'needle' is found
         /
 
-        object.decode(passwordIdentifier,keyIdentifier)  |  example variable:=index1.decode()
-            passwordIdentifier = the object key for the encrypted password, default: "password"
+        object.decode(fullPasswordObjectKey,fullKeyObjectKey)  |  example variable:=index1.decode()
+            fullPasswordObjectKey = the object key for the encrypted password, default: "password1"
 
-            keyIdentifier = the object key for the encrypted key, default: "key"
+            fullKeyObjectKey = the object key for the encrypted key, default: "key1"
 
             notes: returns decrytped password, this is meant to be used with the '_.ktConvert()' method
+        /
+
+        object.verify(password,passwordIdentifier,keyIdentifier)  |  example: variable:=index1.verify("examplePassword")
+            password = the password to check with each available object key decoded
+
+            passwordIdentifier =  the object key name for the password without the number on the end, default: "password"
+
+            passwordIdentifier =  the object key name for the encryption key without the number on the end, default: "password"
+
+            notes: returns 1 if the password is in the object, this is meant to be used with the '_.ktConvert' method
         /
     /
 
@@ -158,5 +168,4 @@
     /
 
 */ ;\\ ᗜˬᗜ
-
 ```
