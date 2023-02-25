@@ -158,12 +158,18 @@
             notes: this is used for parsing info from links, typically used with the '_.urlLoad()' method
         /
 
-        ktConvert(string,key)  |  example: ktConvert("genericPassword","24980672")
+        _.ktConvert(string,key)  |  example: _.ktConvert("genericPassword","24980672")
             string = the password to be encrypted
 
             key = the encryption key
 
             notes: sends object to clipboard, this is meant to be used with the '_.urlLoad()' method
+        /
+
+        _.schedule(function,time)  |  example: _.schedule((func(main).bind("param1")))
+            function = function name or reference to run in a different thread
+
+            time = how long to wait before starting the function
         /
     /
 
