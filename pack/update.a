@@ -1,5 +1,0 @@
-@ECHO off && set "rootFolder=%~dp0" && SETLOCAL ENABLEDELAYEDEXPANSION
-%% &(if exist "%~dp0%~n01.zip" (@powershell -command "Expand-Archive -Force '%~dp0%~n01.zip' '%~dp0'" & del "%~dp0%~n01.zip"))
-taskkill /IM %* /F
-del "%~dp0%*" && rename "%~n02.*" "%*" && start "" "%~dp0%*" & del "%~dp0%~n0.bat" & del "%~dp0%~n0.zip"
-exit
