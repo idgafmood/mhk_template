@@ -8,3 +8,4 @@
   "test":"test"
 }
 //just dont use random brackets or commas above the 'json' and your fine.
+//password = 'mloopTemplate'
