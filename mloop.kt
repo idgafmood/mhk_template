@@ -1,4 +1,4 @@
-should not be here
+# this is the '_.urlLoad()' loaded information
 {
   "version":"1",
   "source":"https://github.com/idgafmood/mhk_template/releases/download/%2B/mloop_ahk.zip",
@@ -7,4 +7,4 @@ should not be here
   "key1":"NjAxOTg0NjcxNQ==`r`n",
   "test":"test"
 }
-should not be here
+#just dont use random brackets or commas above the 'json' and your fine.
