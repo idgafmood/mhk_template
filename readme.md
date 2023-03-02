@@ -152,12 +152,6 @@
             notes: this method returns an array object so it is used to set a variable like the example
         /
 
-        _.string2Object(string)  |  example: index:=_.string2Object("{""key1"":""something""}")
-            string = string containing literal associative array
-
-            notes: this is used for parsing info from links, typically used with the '_.urlLoad()' method
-        /
-
         _.ktConvert(string,key)  |  example: _.ktConvert("genericPassword","24980672")
             string = the password to be encrypted
 
@@ -166,10 +160,18 @@
             notes: sends object to clipboard, this is meant to be used with the '_.urlLoad()' method
         /
 
-        _.schedule(function,time)  |  example: _.schedule((func(main).bind("param1")))
-            function = function name or reference to run in a different thread
+        _.append(original,string)  |  example: variable1:=_.append(variable2,"new text")
+            original = string to append text to, can be an array
 
-            time = how long to wait before starting the function
+            string = string to add to original
+
+            notes: if 'original' is an array it will collapse it and ignores 'string'
+        /
+
+        _.json2Object(string)  |  example: object:=_.json2Object("{""key"":""value""}")
+            string = json object string to convert to ahk object
+
+            notes: only works 1 level deep, will not allow objects/arrays inside values, this is meant to be used with the '_.urlLoad()' method
         /
     /
 
