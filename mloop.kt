@@ -6,5 +6,5 @@
   "password1":"28ABE6402CEB44953E86F91102704E37817805F8365F",
   "key1":"NjAxOTg0NjcxNQ==`r`n"
 }
-//just dont use random brackets or commas above the 'json' and your fine.//
+//just dont use random brackets or commas above the 'json' portion and your fine.//
 //password = 'mloopTemplate'//
