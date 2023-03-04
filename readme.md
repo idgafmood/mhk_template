@@ -26,8 +26,8 @@
     /
 
     extensions:
-        object.queue(search)  |  example: assArray.queue("password")
-            search = what key to look for inside the associative array
+        object.queue(search*)  |  example: assArray.queue("password")
+            search* = what key to look for inside the associative array
 
             notes: looks if a key is inside object and returns the related value, if the key doesn't exist just outputs "0"
         /
@@ -172,6 +172,14 @@
             string = json object string to convert to ahk object
 
             notes: only works 1 level deep, will not allow objects/arrays inside values, this is meant to be used with the '_.urlLoad()' method
+        /
+
+        _.filter(string,pattern*)  |  example: variable:=_.filter("some wacky string.","match\is)(wacky)","is)([(a)]+)?")
+            string = string to apply regex statements to
+
+            pattern* = regex statement to apply to 'string', supports infinite parameters and the output of the previous statement is used
+
+            notes: you can use 'match\' infront of the statement to do a regex match, example: _.filter(string,"match\i)(filter)?")
         /
     /
 
