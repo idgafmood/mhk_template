@@ -8,4 +8,4 @@
 //this is a template for '_.urlLoad()'//
 //get certain line with: '_.s_[number]'//
 //get json portion with: '_.json2object(_.s_)'//
-//try to only include extra information below here//
+//try to include extra info below//
