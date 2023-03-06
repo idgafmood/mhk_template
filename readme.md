@@ -9,7 +9,7 @@
 /* reference
     ! if your in vsc click the arrow to the left of '/*' to collapse this section !
 
-    default variables:
+    *default variables:
         _.scriptNameExtension = the scripts extension
 
         _.screen.width = the specific screen's width every time the variable is called
@@ -17,7 +17,7 @@
 
         _.screen.height = the specific screen's height every time the variable is called
             _.screen.staticHeight = the screen's height when script was loaded
-        
+
         _.hk = the current hotkey with the modifiers cut out
 
         _.batchlines = the current batchLines setting, manually changing this variable will change the batchLines settings, example: '_.sg.init("batchLines","-1")'
@@ -25,7 +25,7 @@
         $[#] = a certain parameter from the script's fileName, Example: 'someVar:=$[1]'
     /
 
-    extensions:
+    *extensions:
         object.queue(search*)  |  example: assArray.queue("password")
             search* = what key to look for inside the associative array
 
@@ -57,7 +57,7 @@
         /
     /
 
-    methods:
+    *methods:
         _.hotkey(modifiers,hotkey,function)  |  example: _.hotkey("$+","r","main")
             modifiers = any modifier combination you would usually use in hotkeys, https://www.autohotkey.com/docs/v1/Hotkeys.htm
 
@@ -65,7 +65,7 @@
 
             function = function name you want to run on keypress, see above in template for reference
         /
-        
+
         _.wait()  |  example: _.wait()
             notes: waits for current hotkey to be lifted to continue, see above in template for reference
         /
@@ -93,7 +93,7 @@
 
             content = the content of the variable you want to initialize globally
         /
-        
+
         _.sg.init(name,content)  |  example: _.sg.init("variableName","text inside variable")
             name = name of variable you want to initialize super-globally
 
@@ -180,6 +180,16 @@
             pattern* = regex statement to apply to 'string', supports infinite parameters and the output of the previous statement is used
 
             notes: you can use 'match\' infront of the statement to do a regex match, example: _.filter(string,"match\i)(filter)?")
+        /
+
+        _.clock()  |  example: _.clock()
+            notes: this starts the clock for the '_.when()' method
+        /
+
+        _.when(time)  |  example: _.when(1000)
+            time = the specific time to continue execution
+
+            notes: more reliable but complicated alternative to the '_.sleep()' method, this is required to be used with the '_.clock()' method
         /
     /
 
