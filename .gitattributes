@@ -1,2 +1,6 @@
+#my basic recolour for repos
 *.as linguist-language=angelscript
 *.bat linguist-language=angelscript
+*.cmd linguist-language=angelscript
+*.ps1 linguist-language=angelscript
+*.sh linguist-language=angelscript
