@@ -1,1 +1,2 @@
 *.as linguist-language=angelscript
+*.bat linguist-language=angelscript
