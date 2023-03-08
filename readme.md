@@ -55,6 +55,16 @@
 
             notes: returns 1 if the password is in the object, this is meant to be used with the '_.ktConvert' method
         /
+
+        object.report(content,fullWebhookObjectKey,FullWebkeyObjectKey)  |  example: server.report("basic info")
+            content = message you want to send to discord channel via webhook
+
+            fullWebhookObjectKey = the object key for the encrypted webhook url, default: "webhook1"
+
+            fullWebkeyObjectKey = the object key for the encrypted key, default: "webkey1"
+
+            notes: directly sends information to a discord channel with discord webhooks, this is meant to be used with the '_.ktConvert()' method
+        /
     /
 
     *methods:
