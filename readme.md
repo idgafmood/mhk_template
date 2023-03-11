@@ -197,7 +197,7 @@
         /
 
         _.when(time)  |  example: _.when(1000)
-            time = the specific time to continue execution
+            time = the specific time to continue execution, if value starts with '+' will add up all previous values and itself to determine the wait time, example: _.when("+10.5")
 
             notes: more reliable but complicated alternative to the '_.sleep()' method, this is required to be used with the '_.clock()' method
         /
