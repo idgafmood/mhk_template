@@ -67,7 +67,7 @@
         /
     /
 
-    *methods:
+    *_:
         _.hotkey(modifiers,hotkey,function)  |  example: _.hotkey("$+","r","main")
             modifiers = any modifier combination you would usually use in hotkeys, https://www.autohotkey.com/docs/v1/Hotkeys.htm
 
@@ -178,12 +178,6 @@
             notes: if 'original' is an array it will collapse it and ignores 'string'
         /
 
-        _.json2Object(string)  |  example: object:=_.json2Object("{""key"":""value""}")
-            string = json object string to convert to ahk object
-
-            notes: only works 1 level deep, will not allow objects/arrays inside values, this is meant to be used with the '_.urlLoad()' method
-        /
-
         _.filter(string,pattern*)  |  example: variable:=_.filter("some wacky string.","match\is)(wacky)","is)([(a)]+)?")
             string = string to apply regex statements to
 
@@ -203,6 +197,15 @@
         /
     /
 
+    *_.json:
+        _.json.load(string)  |  example: server:=_.json.load("{""key"":""value""}")
+            string = json object to convert to ahk object
+        /
+
+        _.json.dump(object)  |  example: variable:=_.json.dump(server)
+            object = ahk object to convert to json object
+        /
+    /
 */ ;\\ ᗜˬᗜ
 ```
 .
