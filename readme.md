@@ -6,7 +6,7 @@
 </p>
 
 ```diff
-@@ bruh@@
+ @@ bruh@@
 /* reference
     ! if your in vsc click the arrow to the left of '/*' to collapse this section !
 
