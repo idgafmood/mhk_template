@@ -225,19 +225,18 @@ main($) { ;*\ ᗜˬᗜ
 
 _: ;*\ startup
 {
-    #Persistent ;\\ 4k compatability example with new init system: _.sg.init("outputVar",strsplit((_.screen.width*(1398/1920)), ".")[1]), _.sg.init("outputVar1",strsplit((_.screen.height*(319/1080)), ".")[1])
+    #Persistent
     #SingleInstance, Force
-    SplitPath, A_ScriptName,,,ScriptNameExt, ScriptName
-    _.init("$",[])
-    while (!((strsplit((strsplit(ScriptName, ";")[(strsplit(ScriptName, ";").minindex())]), "@")[a_index]) = "") && _.check(((regexmatch(a_scriptname,"i).*\;.*\..*$")) > "0"),"1","error@name is fucked up")) {
-        $.Push(strsplit((strsplit(ScriptName, ";")[(strsplit(ScriptName, ";").minindex())]), "@")[a_index])
+    _.init("$",[]), _.sg.init("hotkeyIndex",{ "``":"grave", "`":"grave", "=":"equal", "-":"hyphen", "/":"slash", "\":"backSlash"})
+    while (!((strsplit((strsplit(a_ScriptName, ";")[(strsplit(a_ScriptName, ";").minindex())]), "@")[a_index]) = "") && _.check(((regexmatch(a_scriptname,"i).*\;.*\..*$")) > "0"),"1","error@name is fucked up")) {
+        $.Push(strsplit((strsplit(a_ScriptName, ";")[(strsplit(a_ScriptName, ";").minindex())]), "@")[a_index])
     } ;\\gets arguements from filename, works like '$[1]'
     SysGet, ms_, Monitor
     SetKeyDelay, -1, -1
     SendMode, input
     #MaxHotkeysPerInterval 99999
     #MaxThreadsPerHotkey 1
-    _.sg.init("hotkeyIndex",{ "``":"grave", "`":"grave", "=":"equal", "-":"hyphen", "/":"slash", "\":"backSlash"})
+    global @:="坍塌"
     class _ { ;\\ Mood#6030 class
         ;} variables
             scriptNameExtension[] {
@@ -570,16 +569,15 @@ _: ;*\ startup
                         return _
                     }
                 }
-            }
+            } ;[reason] json lol
             /* info
                 ?\ this json library works with extensions.
                 ?\ meant for _.urlLoad()
                 will accept arrays as input, will collapse each index into a continous string
-                auto detects json objects out of said collapsed string, maybe :<
-                match\is)(\{)(\s)*.+?((\s)*(\})(\s)*)(?!((\})|(\,)))
-                *\ could adjust regex to have better detection on the first bracket, for now just looks for the first one
+                auto detects json objects out of said collapsed string, maybe lol :>
+                *\ regex might need to be updated later, rn it works
             */
-        ;} /
+        ;} / 
         ;{ extensions
             class extensions extends _ {
                 queue(_search*) {
@@ -612,6 +610,15 @@ _: ;*\ startup
                         return 1
                     } ;\\[reason] provides a secure way to send information to the script owner and logging for password protected scripts.
                 ;}
+                坍塌[] {
+                    get {
+                        while (this[a_index])
+                            ■系统变量6:=■系统变量6 this[a_index]
+                        return ■系统变量6
+                    }
+                    set {
+                    }
+                }
             }
             /* extensions info
                 the extensions only work on objects, including arrays, associative arrays & classes. The usecase is specificed in the reference
