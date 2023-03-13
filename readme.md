@@ -5,9 +5,6 @@
 <br>
 </p>
 
-:black_large_square:
-
-
 ```diff
 /* reference
     ! if your in vsc click the arrow to the left of '/*' to collapse this section !
