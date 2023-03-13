@@ -5,6 +5,18 @@
 <br>
 </p>
 
+## what this adds
+- simple raw url loading with `_.urlLoad()` method. (with json format & encryption)
+- precise sleep system with `_.sleep()` method.
+- robust relative timing with `_.when()` method.
+- simple error & logging system with `_.error()` & `_.log()` method.
+- simple way to communicate with script owner using websockets with `server.report()` method. If `server.contact` is set every error will attempt to ping  the script owner. (see `_.urlLoad()`)
+- simple way to download assets for script without including extra files with `_.assetLoad()` method.
+- [optional] script auto updating
+- [optional] script password protection
+
+- lots of new methods/functions/native variables (see below)
+
 ```diff
 /* reference
     ! if your in vsc click the arrow to the left of '/*' to collapse this section !
