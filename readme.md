@@ -4,11 +4,6 @@
 </h1>
 <br>
 </p>
-```diff
-! test
-```
-
-<br>
 
 ```ahk
 /* reference
