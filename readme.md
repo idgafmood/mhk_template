@@ -4,7 +4,9 @@
 </h1>
 <br>
 </p>
-<span style="color:blue">some *blue* text</span>
+```diff
+! test
+```
 
 ```ahk
 /* reference
