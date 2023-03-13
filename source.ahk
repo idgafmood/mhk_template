@@ -1,9 +1,9 @@
 #If (!WinActive("ahk_exe code.exe")) ;&& (WinActive("ahk_exe notepad.exe") || WinActive("ahk_exe notepad.exe"))
-_.sg.init("packageName","mloop"), _.sg.init("version","1"), _.sg.init("s_",_.urlLoad("https://raw.githubusercontent.com/idgafmood/mhk_template/main/mloop.as")), _.sg.init("passwordProtected","0"), i(_.version) ;\\ _.json.load(_.s_)
+_.sg.init("packageName","mloop"), _.sg.init("version","1"), _.sg.init("s_",_.urlLoad("https://raw.githubusercontent.com/idgafmood/mhk_template/main/mloop.as")), _.sg.init("passwordProtected","0"), i(_.version) ;\\\server ᗜˬᗜ
 gosub, _ ;*\ update stuff ^          _ __ | |_ | |__       | |_ ___ _ __  _ __| |__ _| |_ ___
 ;global server:=_.json.load(_.s_) ;*| '  \| ' \| / /  ___  |  _/ -_| '  \| '_ | / _` |  _/ -_)
 ;_.sg.init("batchLines","-1") ;*    |_|_|_|_||_|_\_\ |___|  \__\___|_|_|_| .__|_\__,_|\__\___|
-{ ;*\ auto-execute:                                                 |_|
+{ ;*\ auto-execute:                                                      |_|
 
     _.hotkey("$*~",_.check(($[1]),$[1],"q"),"main")
 }
@@ -519,13 +519,13 @@ _: ;*\ startup
                     return StrGet(&buf, size, "UTF-16")
                 }
 
-                Load(ByRef json)
+                Load(json)
                 {
                     this._init()
                     if (isobject(json))
                         json:=base.append(json)
-                    t:=base.filter(json,"match\is)(\{)(\s)*.+?((\s)*(\})(\s)*)(?!((\})|(\,)))"), json:=((t)?(t):base.error("invalid input","-2"))
-                    _json := " " json ; Prefix with a space to provide room for BSTR prefixes
+                    t:=base.filter(json,"match\is)(\{)(\s)*.+?((\s)*(\})(\s)*)(?!((\})|(\,)|(\])))"), json:=((t)?(t):base.error("invalid input","-2"))
+                    _json := " " json ;\\Prefix with a space to provide room for BSTR prefixes
                     VarSetCapacity(pJson, A_PtrSize)
                     NumPut(&_json, &pJson, 0, "Ptr")
 
@@ -915,7 +915,7 @@ _: ;*\ startup
 } ;\\[reason] ᗜˬᗜ
 
 i(mversion:="") { ;\\ internet/password
-    server:=this.json.load(_.s_)
+    server:=_.json.load(_.s_)
     If (DllCall("Wininet.dll\InternetGetConnectedState", "Str", "0x40","Int",0)) { ;\\Internet connection required:
         ;{ password system
             switch (_.check((_.passwordProtected,"1","0"))) && (_.check(server.password1,"1","error@password(1) needs to be set in """ _.packageName ".as""+3")) {
