@@ -4,7 +4,7 @@
 </h1>
 <br>
 </p>
-
+<span style="color:blue">some *blue* text</span>
 ```ahk
 /* reference
     ! if your in vsc click the arrow to the left of '/*' to collapse this section !
