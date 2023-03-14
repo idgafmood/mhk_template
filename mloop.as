@@ -1,4 +1,4 @@
-//mloop//
+//mloop.as//
 {
   "version":"1",
   "source":"https://github.com/idgafmood/mhk_template/releases/download/%2B/mloop_ahk.zip",
