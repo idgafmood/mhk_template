@@ -10,7 +10,7 @@
 - precise sleep system with `_.sleep()` method.
 - robust relative timing with `_.when()` method.
 - simple error & logging system with `_.error()` & `_.log()` method.
-- simple way to communicate with script owner using websockets with `server.report()` method. If `server.contact` is set every error will attempt to ping  the script owner. (see `_.urlLoad()`)
+- simple way to communicate with script owner using webhooks with `server.report()` method. If `server.contact` is set every error will attempt to ping  the script owner. (see `_.urlLoad()`)
 - simple way to download assets for script without including extra files with `_.assetLoad()` method.
 - [optional] script auto updating
 - [optional] script password protection
